@@ -1,0 +1,15 @@
+Optional 
+  1) install Chocolatey (https://chocolatey.org/install), needs admin rights and special ExecutionPolicy
+Mandatory
+  2) install pyenv (https://github.com/pyenv-win/pyenv-win.git)
+    a) using choco, needs 1): choco install pyenv-win
+    b) Powershell according to documentation, needs admin rights and special ExecutionPolicy
+    c) Zip, Manually, ... see documentation
+
+  3) install python(s) using pyenv and set global python version
+	e.g. list all versions containing 3.8...: pyenv install -l | findstr 3.8
+	e.g. install python 3.10.11: pyenv install 3.10.11
+	e.g. set global version: pyenv global 3.10.11
+        e.g. set local version (within a folder): pyenv local 3.9.1
+	e.g. view all versions on system and see which are local/global: pyenv versions
+	

@@ -1,0 +1,27 @@
+1) install homebrew (https://brew.sh/), needs admin rights
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2) install pyenv 
+	brew install pyenv
+
+	add to your .zshrc file:
+		export PYENV_ROOT="$HOME/.pyenv"
+		export PATH="$PYENV_ROOT/bin:$PATH"
+		export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+
+		plugin=(
+  			pyenv
+		)
+
+		eval "$(pyenv init -)"
+
+
+3) install python(s) using pyenv and set global python version
+	e.g. list all versions containing 3.8...: pyenv install -l | findstr 3.8
+	e.g. install python 3.10.11: pyenv install 3.10.11
+	e.g. set global version: pyenv global 3.10.11
+        e.g. set local version (within a folder): pyenv local 3.9.1
+	e.g. view all versions on system and see which are local/global: pyenv versions
+	
+
+
+Also see: https://medium.com/@impactofai/working-with-pyenv-for-macos-zsh-homebrew-640fe5ae4928
